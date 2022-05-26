@@ -51,7 +51,7 @@ class _IdCardState extends State<IdCard> {
             ),
             Divider(
               height: 90.0,
-              color: Colors.grey[800],
+              color: Colors.white,
             ),
             const Text(
               'NAME',
