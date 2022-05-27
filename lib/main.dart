@@ -64,7 +64,7 @@ class _IdCardState extends State<IdCard> {
             const Text(
               'John Fuller',
               style: TextStyle(
-                color: Colors.amberAccent,
+                color: Colors.lightBlueAccent,
                 letterSpacing: 2.0,
                 fontSize: 20.0,
                 fontWeight: FontWeight.bold,
@@ -74,7 +74,7 @@ class _IdCardState extends State<IdCard> {
             const Text(
               'CURRENT CODING LEVEL',
               style: TextStyle(
-                color: Colors.grey,
+                color: Colors.lightGreenAccent,
                 letterSpacing: 2.0,
               ),
             ),
