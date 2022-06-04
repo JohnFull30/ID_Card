@@ -1,4 +1,7 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
 
 void main() {
   runApp(const MaterialApp(
@@ -15,6 +18,17 @@ class IdCard extends StatefulWidget {
 
 class _IdCardState extends State<IdCard> {
 
+  Future<String> getData() async {
+    var response = await http.get(
+      Uri.parse("https://jsonplaceholder.typicode.com/users"),
+        headers: {
+          "Accept": "application/json"
+    }
+    );
+
+    return(response.body);
+  }
+
   int codingLevel = 0;
 
 
@@ -28,14 +42,28 @@ class _IdCardState extends State<IdCard> {
         backgroundColor: Colors.grey[850],
         elevation: 0.0,
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          setState((){
-            codingLevel += 1;
-          });
-        },
-        child: Icon(Icons.add),
-        backgroundColor: Colors.grey[800],
+      floatingActionButton: Padding(
+        padding: const EdgeInsets.only(left: 30.0, right: 0),
+        child: Row(
+        children: [
+          FloatingActionButton(
+            onPressed: (){},
+            child: const Icon(Icons.accessibility_rounded),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 260.0),
+            child: FloatingActionButton(
+              onPressed: () {
+                setState((){
+                  codingLevel += 1;
+                });
+              },
+              backgroundColor: Colors.grey[800],
+              child:  const Icon(Icons.add),
+            ),
+          ),
+        ],
+        ),
       ),
       body: Padding(
         padding: const EdgeInsets.fromLTRB(30, 40, 30, 0),
@@ -49,7 +77,7 @@ class _IdCardState extends State<IdCard> {
                 backgroundColor: Colors.white,
               ),
             ),
-            Divider(
+            const Divider(
               height: 90.0,
               color: Colors.white,
             ),
@@ -64,7 +92,7 @@ class _IdCardState extends State<IdCard> {
             const Text(
               'John Fuller',
               style: TextStyle(
-                color: Colors.lightBlueAccent,
+                color: Colors.amber,
                 letterSpacing: 2.0,
                 fontSize: 20.0,
                 fontWeight: FontWeight.bold,
@@ -74,7 +102,7 @@ class _IdCardState extends State<IdCard> {
             const Text(
               'CURRENT CODING LEVEL',
               style: TextStyle(
-                color: Colors.lightGreenAccent,
+                color: Colors.amber,
                 letterSpacing: 2.0,
               ),
             ),
