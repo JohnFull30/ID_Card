@@ -47,7 +47,7 @@ class _IdCardState extends State<IdCard> {
         child: Row(
         children: [
           FloatingActionButton(
-            onPressed: (){},
+            onPressed: getData,
             child: const Icon(Icons.accessibility_rounded),
           ),
           Padding(
