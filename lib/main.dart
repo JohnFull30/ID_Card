@@ -68,7 +68,7 @@ class _IdCardState extends State<IdCard> {
       body: Padding(
         padding: const EdgeInsets.fromLTRB(30, 40, 30, 0),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             const Center(
               child: CircleAvatar(
@@ -117,7 +117,8 @@ class _IdCardState extends State<IdCard> {
               ),
             ),
             const SizedBox(height: 30.0,),
-            Row(
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
                 Icon(
                   Icons.email,
