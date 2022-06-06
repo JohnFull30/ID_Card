@@ -43,7 +43,7 @@ class _IdCardState extends State<IdCard> {
         elevation: 0.0,
       ),
       floatingActionButton: Padding(
-        padding: const EdgeInsets.only(left: 80.0, bottom: 60.0),
+        padding: const EdgeInsets.only(left: 600.0, bottom: 200.0),
         child: Row(
         children: [
           FloatingActionButton(
