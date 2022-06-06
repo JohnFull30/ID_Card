@@ -43,16 +43,19 @@ class _IdCardState extends State<IdCard> {
         elevation: 0.0,
       ),
       floatingActionButton: Padding(
-        padding: const EdgeInsets.only(left: 30.0, right: 0),
+        padding: const EdgeInsets.only(left: 80.0, bottom: 60.0),
         child: Row(
         children: [
           FloatingActionButton(
+            foregroundColor: Colors.amber,
+            backgroundColor: Colors.grey[800],
             onPressed: getData,
             child: const Icon(Icons.accessibility_rounded),
           ),
           Padding(
-            padding: const EdgeInsets.only(left: 260.0),
+            padding: const EdgeInsets.only(left: 175.0),
             child: FloatingActionButton(
+              foregroundColor: Colors.amber,
               onPressed: () {
                 setState((){
                   codingLevel += 1;
@@ -99,10 +102,10 @@ class _IdCardState extends State<IdCard> {
               ),
             ),
             const SizedBox(height: 30.0,),
-            const Text(
+             const Text(
               'CURRENT CODING LEVEL',
               style: TextStyle(
-                color: Colors.amber,
+                color: Colors.grey,
                 letterSpacing: 2.0,
               ),
             ),
@@ -119,16 +122,16 @@ class _IdCardState extends State<IdCard> {
             const SizedBox(height: 30.0,),
             Column(
               crossAxisAlignment: CrossAxisAlignment.center,
-              children: <Widget>[
+              children: const <Widget>[
                 Icon(
                   Icons.email,
-                  color: Colors.grey[400],
+                  color: Colors.grey,
                 ),
-                 const SizedBox(width: 10.0),
+                 SizedBox(width: 10.0),
                  Text(
                   'jfuller@gmail.com',
                   style: TextStyle(
-                    color: Colors.grey[400],
+                    color: Colors.amber,
                     fontSize: 18.0,
                     letterSpacing: 1.0,
                   ),
